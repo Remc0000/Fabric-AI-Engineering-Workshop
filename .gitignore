@@ -23,3 +23,6 @@ core.*
 .DS_Store
 Thumbs.db
 .github/eyes/
+.deckio-sync-state.json
+.gh-pages-tmp
+*.local
