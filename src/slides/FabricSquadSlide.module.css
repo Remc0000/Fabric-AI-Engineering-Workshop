@@ -1,0 +1,200 @@
+.squad {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 430px;
+  height: 430px;
+  top: -155px;
+  right: -30px;
+  background: radial-gradient(
+    circle at 42% 42%,
+    var(--pink),
+    color-mix(in srgb, var(--accent) 25%, transparent) 54%,
+    transparent 73%
+  );
+}
+
+.orb2 {
+  width: 300px;
+  height: 300px;
+  bottom: -105px;
+  left: 115px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 30%, transparent) 60%,
+    transparent 75%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--foreground);
+  font-size: clamp(34px, 3.7vw, 48px);
+  font-weight: 850;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+}
+
+.link {
+  flex: 0 0 auto;
+  margin: 0 0 4px;
+  color: var(--cyan);
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 13px;
+}
+
+.squadMap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 235px minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.roleColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roleItem {
+  min-width: 0;
+}
+
+.roleCard {
+  min-height: 105px;
+  padding: 15px 17px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.roleCard h3 {
+  margin: 0 0 7px;
+  color: var(--foreground);
+  font-size: 15px;
+}
+
+.roleCard p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.human,
+.memory {
+  width: 100%;
+  padding: 12px 14px;
+  text-align: center;
+  background: var(--surface-overlay);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+}
+
+.human span,
+.memory span {
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.human p,
+.memory p {
+  margin: 5px 0 0;
+  color: var(--muted-foreground);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.arrow {
+  color: var(--green);
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.hub {
+  display: grid;
+  width: 168px;
+  height: 168px;
+  place-content: center;
+  padding: 19px;
+  text-align: center;
+  border: 1px solid color-mix(in srgb, var(--accent) 65%, transparent);
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, var(--accent), var(--purple-deep));
+  box-shadow: 0 0 36px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.hub span {
+  color: var(--foreground);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.hub strong {
+  margin: 6px 0;
+  color: var(--foreground);
+  font-size: 20px;
+  line-height: 1.05;
+}
+
+.hub p {
+  margin: 0;
+  color: color-mix(in srgb, var(--foreground) 78%, transparent);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.memory {
+  margin-top: 9px;
+}
+
+.note {
+  margin: 0;
+  padding: 11px 14px;
+  color: var(--muted-foreground);
+  font-size: 11px;
+  line-height: 1.35;
+  text-align: center;
+  background: var(--surface-overlay);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}

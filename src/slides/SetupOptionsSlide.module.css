@@ -1,0 +1,166 @@
+.setupOptions {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  right: -60px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--green),
+    color-mix(in srgb, var(--accent) 26%, transparent) 52%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 300px;
+  height: 300px;
+  bottom: -70px;
+  right: 180px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 30%, transparent) 60%,
+    transparent 75%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.header {
+  max-width: 900px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--foreground);
+  font-size: clamp(38px, 4.3vw, 56px);
+  font-weight: 850;
+  letter-spacing: -1.8px;
+  line-height: 1.05;
+}
+
+.optionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.optionCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+  padding: 28px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.optionCard::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--accent));
+  content: '';
+  opacity: 0.72;
+}
+
+.recommended {
+  border-color: color-mix(in srgb, var(--green) 50%, var(--border));
+  box-shadow: 0 0 34px color-mix(in srgb, var(--green) 10%, transparent);
+}
+
+.recommended::before {
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+}
+
+.optionHeader {
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.recommended .badge {
+  color: var(--green);
+}
+
+.optionTitle {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 26px;
+  font-weight: 780;
+  letter-spacing: -0.5px;
+}
+
+.optionDescription {
+  margin: 0 0 20px;
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.guideList,
+.commandList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.guideList code,
+.commandList code {
+  display: block;
+  overflow: hidden;
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--background) 72%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--foreground);
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repo {
+  display: block;
+  margin-top: 14px;
+  color: var(--cyan);
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 12px;
+}
+
+.extras {
+  margin: 14px 0 0;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  line-height: 1.4;
+}

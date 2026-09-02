@@ -1,0 +1,148 @@
+.roadmap {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 420px;
+  height: 420px;
+  top: -145px;
+  right: -20px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--accent),
+    color-mix(in srgb, var(--pink) 23%, transparent) 53%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  left: 130px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 30%, transparent) 60%,
+    transparent 75%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.header {
+  max-width: 970px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 9px;
+  color: var(--foreground);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 850;
+  letter-spacing: -1.6px;
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.roundGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.roundItem {
+  min-width: 0;
+}
+
+.roundCard {
+  position: relative;
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  padding: 21px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+}
+
+.roundCard::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--accent));
+  content: '';
+  opacity: 0.8;
+}
+
+.number {
+  margin-bottom: 16px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 1.5px;
+}
+
+.roundCard h3 {
+  margin: 0 0 12px;
+  color: var(--foreground);
+  font-size: 19px;
+  line-height: 1.15;
+}
+
+.roundText {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.outcome {
+  margin: auto 0 0;
+  padding-top: 15px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.guardrail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 13px 16px;
+  background: var(--surface-overlay);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  color: var(--foreground);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.guardrail > span:nth-child(2),
+.guardrail > span:nth-child(4) {
+  color: var(--green);
+}

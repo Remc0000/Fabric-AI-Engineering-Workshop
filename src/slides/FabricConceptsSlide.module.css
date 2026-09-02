@@ -1,0 +1,153 @@
+.fabricConcepts {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 410px;
+  height: 410px;
+  top: -130px;
+  right: -30px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--green),
+    color-mix(in srgb, var(--cyan) 25%, transparent) 52%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 280px;
+  height: 280px;
+  bottom: -80px;
+  left: 130px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 30%, transparent) 60%,
+    transparent 75%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.header {
+  max-width: 900px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--foreground);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 850;
+  letter-spacing: -1.6px;
+  line-height: 1.05;
+}
+
+.conceptGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.conceptItem {
+  min-width: 0;
+}
+
+.conceptCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 196px;
+  padding: 18px 20px 46px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.conceptCard::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--accent));
+  content: '';
+  opacity: 0.75;
+}
+
+.number {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.tagline {
+  margin: 0 0 6px;
+  color: var(--muted-foreground);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.conceptTitle {
+  margin: 0 0 8px;
+  color: var(--foreground);
+  font-size: 22px;
+  font-weight: 780;
+}
+
+.description {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.conceptCard code {
+  position: absolute;
+  bottom: 17px;
+  left: 20px;
+  color: var(--cyan);
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 12px;
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--surface-overlay);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--foreground);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.flow > span:nth-child(2),
+.flow > span:nth-child(4),
+.flow > span:nth-child(6) {
+  color: var(--green);
+  font-size: 18px;
+}

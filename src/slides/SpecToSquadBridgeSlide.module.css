@@ -1,0 +1,209 @@
+.bridge {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 440px;
+  height: 440px;
+  top: -155px;
+  right: -30px;
+  background: radial-gradient(
+    circle at 42% 42%,
+    var(--accent),
+    color-mix(in srgb, var(--pink) 24%, transparent) 54%,
+    transparent 73%
+  );
+}
+
+.orb2 {
+  width: 310px;
+  height: 310px;
+  bottom: -110px;
+  left: 120px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 30%, transparent) 60%,
+    transparent 75%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.header {
+  max-width: 1030px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 10px;
+  color: var(--foreground);
+  font-size: clamp(34px, 3.8vw, 49px);
+  font-weight: 850;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 42px minmax(0, 0.85fr) 42px minmax(0, 1.05fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.specCard,
+.squadCard {
+  position: relative;
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  padding: 23px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+}
+
+.specCard::before,
+.squadCard::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink), var(--accent));
+  content: '';
+}
+
+.squadCard::before {
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+}
+
+.cardLabel {
+  margin: 0 0 13px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.specCard h3,
+.squadCard h3 {
+  margin: 0 0 14px;
+  color: var(--foreground);
+  font-size: 23px;
+}
+
+.specCard > p:not(.cardLabel),
+.squadCard > p:not(.cardLabel) {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.frameworks {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.frameworks span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.hub {
+  display: grid;
+  width: 105px;
+  height: 105px;
+  margin: auto auto 0;
+  place-items: center;
+  padding: 15px;
+  text-align: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, var(--green), var(--accent));
+  color: var(--foreground);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.connector {
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-size: 29px;
+}
+
+.specialistGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.specialistItem {
+  min-width: 0;
+}
+
+.specialistCard {
+  display: flex;
+  min-height: 134px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+}
+
+.specialistCard strong {
+  color: var(--foreground);
+  font-size: 16px;
+}
+
+.specialistCard span {
+  margin-top: 7px;
+  color: var(--muted-foreground);
+  font-size: 11px;
+}
+
+.takeaway {
+  margin: 0;
+  padding: 13px 16px;
+  color: var(--foreground);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  background: var(--surface-overlay);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+}

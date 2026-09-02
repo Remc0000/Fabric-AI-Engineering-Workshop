@@ -1,0 +1,127 @@
+.openSpecOverview {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 430px;
+  height: 430px;
+  top: -140px;
+  right: -40px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--pink),
+    color-mix(in srgb, var(--purple) 28%, transparent) 52%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 290px;
+  height: 290px;
+  bottom: -70px;
+  left: 120px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 30%, transparent) 60%,
+    transparent 75%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.header {
+  max-width: 970px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 12px;
+  color: var(--foreground);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 850;
+  letter-spacing: -1.6px;
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 940px;
+  color: var(--muted-foreground);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.artifactGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.artifactItem {
+  min-width: 0;
+}
+
+.artifactCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 154px;
+  padding: 20px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.artifactCard::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink), var(--purple));
+  content: '';
+  opacity: 0.78;
+}
+
+.artifactTitle {
+  margin: 4px 0 10px;
+  color: var(--foreground);
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.artifactDescription {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.takeaway {
+  padding: 14px 18px;
+  background: var(--surface-overlay);
+  border: 1px solid color-mix(in srgb, var(--pink) 40%, var(--border));
+  border-radius: 12px;
+}
+
+.takeaway p {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 14px;
+  line-height: 1.45;
+}

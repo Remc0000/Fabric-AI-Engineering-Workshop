@@ -1,0 +1,123 @@
+.fabricCatalog {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 380px;
+  height: 380px;
+  top: -140px;
+  right: -40px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--cyan),
+    color-mix(in srgb, var(--accent) 24%, transparent) 52%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 250px;
+  height: 250px;
+  bottom: -100px;
+  left: 160px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 28%, transparent) 60%,
+    transparent 75%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  max-width: 760px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--foreground);
+  font-size: clamp(34px, 3.8vw, 48px);
+  font-weight: 850;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+}
+
+.catalogSection {
+  padding: 14px 16px;
+  background: var(--surface-overlay);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+}
+
+.sectionTitle {
+  margin: 0 0 10px;
+  color: var(--foreground);
+  font-size: 14px;
+  font-weight: 780;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.skillTag,
+.agentTag,
+.mcpTag {
+  display: block;
+  overflow: hidden;
+  padding: 6px 8px;
+  border-radius: 7px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 9px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.skillTag {
+  background: color-mix(in srgb, var(--accent) 12%, var(--secondary));
+  color: var(--foreground);
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.compactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.agentTag {
+  background: color-mix(in srgb, var(--purple) 16%, var(--secondary));
+  color: var(--foreground);
+}
+
+.mcpTag {
+  background: color-mix(in srgb, var(--green) 14%, var(--secondary));
+  color: var(--foreground);
+}

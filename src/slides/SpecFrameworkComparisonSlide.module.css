@@ -1,0 +1,177 @@
+.comparison {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 410px;
+  height: 410px;
+  top: -130px;
+  right: -30px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--pink),
+    color-mix(in srgb, var(--accent) 27%, transparent) 52%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 280px;
+  height: 280px;
+  bottom: -90px;
+  left: 140px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 30%, transparent) 60%,
+    transparent 75%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  max-width: 850px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--foreground);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 850;
+  letter-spacing: -1.6px;
+  line-height: 1.05;
+}
+
+.frameworkGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.frameworkCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 330px;
+  padding: 24px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.frameworkCard::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  content: '';
+  opacity: 0.8;
+}
+
+.openSpecCard::before {
+  background: linear-gradient(90deg, var(--pink), var(--purple));
+}
+
+.specKitCard::before {
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+}
+
+.label {
+  margin: 0 0 8px;
+  color: var(--muted-foreground);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.frameworkTitle {
+  margin: 0 0 18px;
+  color: var(--foreground);
+  font-size: 29px;
+  font-weight: 800;
+}
+
+.pointList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pointItem {
+  min-width: 0;
+}
+
+.pointItem p {
+  position: relative;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.pointItem p::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  content: '';
+}
+
+.choose {
+  position: absolute;
+  right: 24px;
+  bottom: 21px;
+  left: 24px;
+  margin: 0;
+  color: var(--foreground);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.shared {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 17px;
+  background: var(--surface-overlay);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+}
+
+.sharedLabel {
+  flex: 0 0 auto;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.shared p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.4;
+}

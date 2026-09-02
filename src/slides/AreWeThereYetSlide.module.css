@@ -1,0 +1,101 @@
+.areWeThere {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 620px;
+  height: 620px;
+  top: -260px;
+  right: -120px;
+  background: radial-gradient(circle at 45% 45%, var(--accent), transparent 70%);
+}
+
+.orb2 {
+  width: 430px;
+  height: 430px;
+  bottom: -190px;
+  left: 60px;
+  background: radial-gradient(circle at 50% 50%, var(--purple-deep), transparent 72%);
+}
+
+.orb3 {
+  width: 260px;
+  height: 260px;
+  top: 250px;
+  left: 440px;
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--pink) 45%, transparent), transparent 72%);
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 15px;
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--foreground);
+  font-size: clamp(68px, 9vw, 112px);
+  font-weight: 900;
+  letter-spacing: -4px;
+  line-height: 0.95;
+}
+
+.subtitle {
+  max-width: 800px;
+  margin: 24px 0 30px;
+  color: var(--muted-foreground);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.questionGrid {
+  display: grid;
+  width: min(820px, 100%);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.question strong {
+  color: var(--green);
+  font-size: 22px;
+}
+
+.question:nth-child(n + 4) strong {
+  color: var(--pink);
+}
+
+.answer {
+  margin: 25px 0 0;
+  color: var(--foreground);
+  font-size: 21px;
+  font-weight: 800;
+}

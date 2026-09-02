@@ -1,0 +1,122 @@
+.fabricSkills {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 440px;
+  height: 440px;
+  top: -130px;
+  right: -40px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--cyan),
+    color-mix(in srgb, var(--accent) 28%, transparent) 52%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 300px;
+  height: 300px;
+  bottom: -70px;
+  left: 120px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 30%, transparent) 60%,
+    transparent 75%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.header {
+  max-width: 980px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 14px;
+  color: var(--foreground);
+  font-size: clamp(38px, 4.3vw, 56px);
+  font-weight: 850;
+  letter-spacing: -1.8px;
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 930px;
+  color: var(--muted-foreground);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.cardItem {
+  min-width: 0;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  padding: 26px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--accent));
+  content: '';
+  opacity: 0.72;
+}
+
+.marker {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.cardTitle {
+  margin: 0 0 12px;
+  color: var(--foreground);
+  font-size: 24px;
+  font-weight: 760;
+}
+
+.cardDescription {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 1.5;
+}
