@@ -11,7 +11,7 @@ export default function CoverSlide() {
 
       <div className="content-frame content-gutter">
         <div className={styles.content}>
-          <Editable as="p" id="cover.eyebrow" className={styles.eyebrow}>ISD Offsite</Editable>
+          <Editable as="p" id="cover.eyebrow" className={styles.eyebrow}>Workshop</Editable>
           <h1>
             <Editable as="span" id="cover.titleBefore">Welcome @ </Editable>
             <Editable as="span" id="cover.titleHighlight" className={styles.highlight}>Agentic Engineering for Data</Editable>
@@ -39,7 +39,7 @@ export default function CoverSlide() {
         </div>
       </div>
 
-      <BottomBar text={<Editable as="span" id="cover.footer">ISD Offsite</Editable>} />
+      <BottomBar text={<Editable as="span" id="cover.footer">Agentic Engineering for Data</Editable>} />
     </Slide>
   )
 }
