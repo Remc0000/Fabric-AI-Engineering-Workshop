@@ -20,6 +20,12 @@ const steps = [
     title: 'Describe the outcome',
     description: 'Ask for a Fabric task in natural language. Copilot selects the relevant skills and workflow.',
   },
+  {
+    id: 'single',
+    number: '4',
+    title: 'Or install just one skill',
+    description: 'Use APM (Agent Package Manager) to add a single skill - and its MCP servers - to copilot, claude, cursor, codex, and more.',
+  },
 ]
 
 export default function FabricSkillsWorkflowSlide({ index }) {
@@ -73,6 +79,10 @@ export default function FabricSkillsWorkflowSlide({ index }) {
             Use Microsoft Fabric skills to design a medallion architecture for NYC taxi data.
           </Editable>
         </div>
+
+        <Editable as="p" id="fabricSkillsWorkflow.apmNote" multiline className={styles.note}>
+          <code>apm install microsoft/skills-for-fabric --skill sqldw-cli --target copilot</code> installs one skill plus any MCP servers and agents it needs, without pulling in the full bundle.
+        </Editable>
       </div>
 
       <BottomBar text={<Editable as="span" id="fabricSkillsWorkflow.footer">Agentic Engineering for Data</Editable>} />

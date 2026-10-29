@@ -72,7 +72,7 @@ export default function OpenSpecWorkflowSlide({ index }) {
         </EditableList>
 
         <Editable as="p" id="openSpecWorkflow.note" multiline className={styles.note}>
-          Start with explore when the solution is unclear; go directly to propose when the outcome is already understood.
+          Start with explore when the solution is unclear; go directly to propose when the outcome is already understood. For multi-repo teams, Stores let specs live in their own repo and span services.
         </Editable>
       </div>
 

@@ -96,7 +96,7 @@ export default function FabricSquadSlide({ index }) {
         </div>
 
         <Editable as="p" id="fabricSquad.note" multiline className={styles.note}>
-          Squad coordinates specialists in parallel while keeping the human accountable for priorities, review, and approval. The project is currently alpha software.
+          Squad coordinates specialists in parallel while keeping the human accountable for priorities, review, and approval. Squad 2.0 projects the same team into Copilot, Claude Code, Cursor, Codex, and more, wiring native MCP servers for each host.
         </Editable>
       </div>
 

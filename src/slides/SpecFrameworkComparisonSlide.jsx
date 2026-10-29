@@ -10,9 +10,9 @@ const openSpecPoints = [
 
 const specKitPoints = [
   { id: 'shape', text: 'Comprehensive process with constitution, spec, plan, tasks, implementation, and convergence' },
-  { id: 'flow', text: 'Specify → plan → tasks → implement → converge' },
+  { id: 'flow', text: 'Constitution → specify → plan → tasks → implement → converge' },
   { id: 'fit', text: 'Strong fit for structured delivery, shared standards, and organization-wide workflows' },
-  { id: 'style', text: 'Deep customization through extensions, presets, bundles, and project overrides' },
+  { id: 'style', text: 'Deep customization via searchable extension, preset, workflow, and bundle catalogs' },
 ]
 
 export default function SpecFrameworkComparisonSlide({ index }) {
