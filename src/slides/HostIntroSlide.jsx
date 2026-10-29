@@ -10,7 +10,7 @@ export default function HostIntroSlide({ index }) {
 
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.layout}>
-          <img className={styles.avatar} src="/presenters/remco.jpg" alt="Remco van Dam" />
+          <img className={styles.avatar} src="/presenters/remco.jpg?v=2" alt="Remco van Dam" />
           <div className={styles.copy}>
             <Editable as="p" id="hosts.eyebrow" className={styles.eyebrow}>Your guide for today</Editable>
             <Editable as="h2" id="hosts.title" className={styles.title}>Meet Remco van Dam</Editable>
